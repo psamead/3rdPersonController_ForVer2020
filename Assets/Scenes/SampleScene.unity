@@ -417,7 +417,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1775347284, guid: 13277faea7965684fbf384b471bae8fa, type: 3}
       propertyPath: m_Height
-      value: 1.5
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 1775347285, guid: 13277faea7965684fbf384b471bae8fa, type: 3}
       propertyPath: m_UseGravity

@@ -67,6 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "3rdPersonController_Test.sln",
+    "dotnet.defaultSolution": "3rdPersonController_ForVer2020.sln",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }
