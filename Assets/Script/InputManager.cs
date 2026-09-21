@@ -5,10 +5,17 @@ using System.Collections.Generic;
 public class InputManager : MonoBehaviour
 {
     PlayerControls playerControls;
+    AnimatorManager animatorManager;
 
     public Vector2 movementInput;
+    private float moveAmount;
     public float verticalInput;
     public float horizontalInput;
+
+    private void Awake()
+    {
+        animatorManager = GetComponent<AnimatorManager>();
+    }
 
     private void OnEnable()
     {
@@ -17,7 +24,6 @@ public class InputManager : MonoBehaviour
             playerControls = new PlayerControls();
 
             playerControls.PlayerMovment.Movement.performed += i => movementInput = i.ReadValue<Vector2>();
-
         }
 
         playerControls.Enable();
@@ -40,6 +46,7 @@ public class InputManager : MonoBehaviour
     {
         verticalInput = movementInput.y;
         horizontalInput = movementInput.x;
-
+        moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
+        animatorManager.updateAnimatorValues(0, moveAmount);
     }
 }
