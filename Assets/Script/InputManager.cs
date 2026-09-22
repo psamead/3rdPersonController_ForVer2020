@@ -23,7 +23,7 @@ public class InputManager : MonoBehaviour
         {
             playerControls = new PlayerControls();
 
-            playerControls.PlayerMovment.Movement.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
+            playerControls.PlayerMovement.Movement.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
         }
 
         playerControls.Enable();

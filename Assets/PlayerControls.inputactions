@@ -1,9 +1,8 @@
 {
-    "version": 1,
     "name": "PlayerControls",
     "maps": [
         {
-            "name": "Player Movment",
+            "name": "Player Movement",
             "id": "fc5a79ac-93a2-4842-b025-46d5a0ef2407",
             "actions": [
                 {
@@ -13,8 +12,7 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
