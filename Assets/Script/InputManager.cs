@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour
     AnimatorManager animatorManager;
 
     public Vector2 movementInput;
+    public Vector2 cameraInput; 
     private float moveAmount;
     public float verticalInput;
     public float horizontalInput;
@@ -24,6 +25,7 @@ public class InputManager : MonoBehaviour
             playerControls = new PlayerControls();
 
             playerControls.PlayerMovement.Movement.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
+            playerControls.PlayerMovement.Camera.performed += ctx => cameraInput = ctx.ReadValue<Vector2>();
         }
 
         playerControls.Enable();

@@ -10,6 +10,9 @@ public class CameraManager : MonoBehaviour
 
     public float cameraFollowSpeed = 0.2f;
 
+    public float lookAngle;  // Camera looking up and down
+    public float pivotAngle;  // Camera looking left and right
+
     private void Awake()
     {
         targetTransform = FindObjectOfType<PlayerManager>().transform;
@@ -21,5 +24,11 @@ public class CameraManager : MonoBehaviour
         Vector3 targetPosition = Vector3.SmoothDamp
             (transform.position, targetTransform.position, ref cameraFollowVelocity, cameraFollowSpeed);
         transform.position = targetPosition;
+    }
+
+        public void RotateCamera()
+    {
+        // lookAngle = lookAngle + (mouseXInput * cameraLookSpped);
+        // pivotAngle = pivotAngle + (mouseYInput * cameraPivotSpped);
     }
 }

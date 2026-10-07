@@ -27,5 +27,4 @@ public class PlayerManager : MonoBehaviour
     {
         cameraManager.FollowTarget();
     }
-
 }
