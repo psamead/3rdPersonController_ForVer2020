@@ -2006,7 +2006,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176451104}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1944026937}
@@ -2884,9 +2884,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 0}
+  cameraPivot: {fileID: 1944026937}
   cameraFollowSpeed: 0.2
+  cameraLookSpped: 2
+  cameraPivotSpped: 2
   lookAngle: 0
   pivotAngle: 0
+  minimunPivotAngle: -35
+  maximumPivotAngle: 35
 --- !u!4 &1764018795
 Transform:
   m_ObjectHideFlags: 0
@@ -3686,7 +3691,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944026936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.7, z: -3}
+  m_LocalPosition: {x: 0, y: 1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1176451107}
@@ -4415,7 +4420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4281261662884523670, guid: 59ca5f1df9f31f34ea927989e7ab20ae, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4281261662884523670, guid: 59ca5f1df9f31f34ea927989e7ab20ae, type: 3}
       propertyPath: m_Interpolate
