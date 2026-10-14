@@ -1965,9 +1965,9 @@ MonoBehaviour:
   cameraCollisionOffSet: 0.01
   minimumCollisionOffSet: 0.01
   cameraCollisionRadius: 0.1
-  cameraFollowSpeed: 0.01
-  cameraLookSpeed: 0.05
-  cameraPivotSpeed: 0.05
+  cameraFollowSpeed: 0.05
+  cameraLookSpeed: 0.1
+  cameraPivotSpeed: 0.1
   lookAngle: 0
   pivotAngle: 0
   minimunPivotAngle: -35
