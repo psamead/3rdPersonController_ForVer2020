@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerLocomotion : MonoBehaviour
 {
+    PlayerManager playerManager;
     InputManager inputManager;
 
     Vector3 moveDirection;
@@ -18,6 +19,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void Awake()
     {
+        playerManager = GetComponent<PlayerManager>();
         inputManager = GetComponent<InputManager>();
         playerRigidbody = GetComponent<Rigidbody>();
         cameraObject = Camera.main.transform;
@@ -25,6 +27,10 @@ public class PlayerLocomotion : MonoBehaviour
 
     public void HandleAllMovement()
     {
+        if(playerManager.isInteracting)
+        {
+            return;
+        }
         HandleMovement();
         HandleRotation();
     }
